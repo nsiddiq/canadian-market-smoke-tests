@@ -3,151 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen Home Watch — Trusted Home Watch Services in Penticton & Summerland</title>
+    <title>Pen Home Watch — Professional Home Watch Services in Penticton & Summerland, BC</title>
+    <meta name="description" content="Trusted home watch and property care services for snowbirds and absentee homeowners in Penticton, Summerland, and the South Okanagan.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: '#1e3a5f',
-                        accent: '#f59e0b',
+                        brand: { 50: '#f0f5fa', 100: '#dce8f3', 200: '#b8d1e8', 300: '#89b3d8', 400: '#5a8fc4', 500: '#1e3a5f', 600: '#1a3254', 700: '#152a47', 800: '#11223a', 900: '#0c1a2d' },
+                        accent: { 50: '#fffbeb', 100: '#fef3c7', 200: '#fde68a', 300: '#fcd34d', 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706', 700: '#b45309' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Georgia', 'serif'],
                     }
                 }
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-hero { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 50%, #1e3a5f 100%); }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .stat-gradient { background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">P</span>
+                </div>
+                <span class="text-xl font-bold text-brand-500">Pen Home Watch</span>
+            </a>
+            <div class="space-x-8 hidden md:flex items-center">
+                <a href="#services" class="text-gray-600 hover:text-brand-500 transition font-medium">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-brand-500 transition font-medium">About</a>
+                <a href="#areas" class="text-gray-600 hover:text-brand-500 transition font-medium">Areas</a>
+                <a href="#contact" class="bg-accent-500 text-white px-5 py-2.5 rounded-lg hover:bg-accent-600 transition font-medium">Get a Quote</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+            <a href="#services" class="block text-gray-600 hover:text-brand-500 font-medium">Services</a>
+            <a href="#about" class="block text-gray-600 hover:text-brand-500 font-medium">About</a>
+            <a href="#areas" class="block text-gray-600 hover:text-brand-500 font-medium">Areas</a>
+            <a href="#contact" class="block bg-accent-500 text-white px-5 py-2.5 rounded-lg text-center font-medium">Get a Quote</a>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <header class="bg-brand text-white">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">Pen Home Watch</div>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#services" class="hover:text-accent transition">Services</a>
-                <a href="#areas" class="hover:text-accent transition">Service Areas</a>
-                <a href="#contact" class="hover:text-accent transition">Get a Quote</a>
+    <header class="gradient-hero text-white pt-28 pb-20 md:pt-36 md:pb-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <p class="text-accent-400 font-medium mb-4 tracking-wide uppercase text-sm">Trusted Home Watch Since 2019</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Your Okanagan Home,<br>Watched Over With Care</h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">Professional property monitoring for snowbirds, vacation homeowners, and absentee property owners in Penticton and Summerland. We give you peace of mind while you're away.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="inline-block bg-accent-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-accent-600 transition text-center">Request Free Consultation</a>
+                    <a href="#services" class="inline-block border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition text-center">View Services</a>
+                </div>
             </div>
-        </nav>
-        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Your Home Deserves Watchful Eyes<br>While You're Away</h1>
-            <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">Professional home watch services for snowbirds, vacation homeowners, and absentee property owners in Penticton and Summerland, BC.</p>
-            <a href="#contact" class="inline-block bg-accent text-brand font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 transition">Request Your Free Consultation</a>
         </div>
     </header>
 
-    <!-- Value Proposition -->
-    <section class="py-16 bg-gray-50">
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-gray-50 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-brand">Why Penticton & Summerland Homeowners Trust Us</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">🏠</div>
-                    <h3 class="text-xl font-bold mb-3">Regular Inspections</h3>
-                    <p class="text-gray-600">Scheduled interior and exterior checks ensure your Okanagan property stays safe from water damage, break-ins, and seasonal hazards.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">200+</p>
+                    <p class="text-gray-500 text-sm mt-1">Properties Monitored</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">📋</div>
-                    <h3 class="text-xl font-bold mb-3">Detailed Reports</h3>
-                    <p class="text-gray-600">Photo-documented visit reports sent directly to you after every inspection, so you always know the status of your home.</p>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">6+</p>
+                    <p class="text-gray-500 text-sm mt-1">Years Experience</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">🔑</div>
-                    <h3 class="text-xl font-bold mb-3">Concierge Services</h3>
-                    <p class="text-gray-600">Mail collection, contractor coordination, seasonal prep—we handle the details so you can enjoy your time away worry-free.</p>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">100%</p>
+                    <p class="text-gray-500 text-sm mt-1">Insured & Bonded</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">24/7</p>
+                    <p class="text-gray-500 text-sm mt-1">Emergency Response</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-16">
+    <section id="services" class="py-20">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-brand">Our Services</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Home Watch Inspections</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Interior & exterior walkthroughs</li>
-                        <li>✓ HVAC, plumbing & electrical checks</li>
-                        <li>✓ Storm & pest damage assessment</li>
-                        <li>✓ Security system verification</li>
-                    </ul>
+            <div class="text-center mb-16">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">What We Do</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500">Comprehensive Home Watch Services</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">We handle everything so you can enjoy your time away without a second thought about your property.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Home Watch Inspections</h3>
+                    <p class="text-gray-500 leading-relaxed">Scheduled interior and exterior walkthroughs with HVAC, plumbing, and security verification. Photo-documented reports after every visit.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Property Concierge</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Mail & package pickup</li>
-                        <li>✓ Contractor meet & greet</li>
-                        <li>✓ Pre-arrival home preparation</li>
-                        <li>✓ Seasonal winterization & spring opening</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Seasonal Property Prep</h3>
+                    <p class="text-gray-500 leading-relaxed">Winterization, spring opening, irrigation management, and storm-readiness checks tailored to the Okanagan climate cycle.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Emergency Response</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ 24/7 emergency contact</li>
-                        <li>✓ Rapid on-site response</li>
-                        <li>✓ Insurance liaison support</li>
-                        <li>✓ Temporary repair coordination</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Concierge & Key Holder</h3>
+                    <p class="text-gray-500 leading-relaxed">Contractor coordination, mail collection, pre-arrival home preparation, and vendor management on your behalf.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Vacation Rental Support</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Guest turnover inspections</li>
-                        <li>✓ Cleaning crew coordination</li>
-                        <li>✓ Supply restocking</li>
-                        <li>✓ Maintenance scheduling</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Emergency Response</h3>
+                    <p class="text-gray-500 leading-relaxed">24/7 emergency availability with rapid on-site assessment, insurance documentation support, and temporary repair coordination.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Security Monitoring</h3>
+                    <p class="text-gray-500 leading-relaxed">Alarm system testing, entry point verification, lighting checks, and occupancy simulation to deter break-ins.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Vacation Rental Support</h3>
+                    <p class="text-gray-500 leading-relaxed">Guest turnover inspections, cleaning crew coordination, supply restocking, and property condition documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">About Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-500 mb-6">Local Experts Who Care About Your Property</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">Pen Home Watch was founded in 2019 by Sarah and David Mitchell, lifelong South Okanagan residents who saw a growing need for reliable, professional home monitoring in the Penticton and Summerland area.</p>
+                    <p class="text-gray-600 leading-relaxed mb-4">After years in property management, they built Pen Home Watch on a simple principle: treat every client's home as if it were their own. Today, their team of certified home watch professionals serves over 200 properties across the South Okanagan.</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">As accredited members of the National Home Watch Association (NHWA), we adhere to the highest industry standards for property monitoring, reporting, and client communication.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">NHWA Accredited</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Fully Insured</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Bonded</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Background Checked</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-brand-500 mb-6">Why Homeowners Choose Us</h3>
+                    <div class="space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Photo-Documented Reports</p>
+                                <p class="text-gray-500 text-sm">Timestamped photos and detailed notes after every single visit.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Customizable Visit Schedules</p>
+                                <p class="text-gray-500 text-sm">Weekly, bi-weekly, or custom plans that fit your needs and budget.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Local Knowledge</p>
+                                <p class="text-gray-500 text-sm">We know the Okanagan climate, common property issues, and trusted local tradespeople.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Direct Communication</p>
+                                <p class="text-gray-500 text-sm">One dedicated point of contact. No call centres, no runaround.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Testimonials</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500">What Our Clients Say</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"We spend winters in Arizona and Pen Home Watch gives us total peace of mind. Their reports are thorough and we love the photos after every visit."</p>
+                    <p class="font-semibold text-gray-800">— Robert & Linda K.</p>
+                    <p class="text-gray-400 text-sm">Penticton homeowners, clients since 2020</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"They caught a small plumbing leak during a routine check that could have turned into a $30K disaster. Worth every penny."</p>
+                    <p class="font-semibold text-gray-800">— Marcus T.</p>
+                    <p class="text-gray-400 text-sm">Summerland property owner</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"Professional, reliable, and communicative. We manage our Naramata vacation rental from Calgary and couldn't do it without them."</p>
+                    <p class="font-semibold text-gray-800">— Jennifer & Paul S.</p>
+                    <p class="text-gray-400 text-sm">Naramata vacation rental owners</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Areas -->
-    <section id="areas" class="py-16 bg-gray-50">
+    <section id="areas" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8 text-brand">Proudly Serving the South Okanagan</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">We provide home watch services throughout Penticton, Summerland, Naramata, and surrounding communities in the beautiful South Okanagan Valley.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Penticton</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Summerland</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Naramata</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Kaleden</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Okanagan Falls</span>
+            <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Coverage</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-500">Proudly Serving the South Okanagan</h2>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto">We provide home watch services throughout Penticton, Summerland, Naramata, and surrounding communities in the beautiful South Okanagan Valley.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Penticton</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Summerland</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Naramata</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Kaleden</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Okanagan Falls</span>
             </div>
         </div>
     </section>
 
     <!-- Contact / Lead Form -->
-    <section id="contact" class="py-16">
+    <section id="contact" class="py-20">
         <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-4 text-brand">Get Your Free Home Watch Quote</h2>
-            <p class="text-center text-gray-600 mb-8">Tell us about your property and we'll create a customized watch plan for your Penticton or Summerland home.</p>
-            <form id="leadForm" class="space-y-6">
+            <div class="text-center mb-10">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Get Started</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500 mb-4">Request Your Free Quote</h2>
+                <p class="text-gray-500">Tell us about your property and we'll create a customized watch plan for your Penticton or Summerland home.</p>
+            </div>
+            <form id="leadForm" class="space-y-5 bg-gray-50 p-8 rounded-2xl border border-gray-100">
                 <input type="hidden" name="source" value="penhomewatch-landing">
                 <input type="hidden" name="market" value="penticton-summerland">
                 <div>
-                    <label for="leadName" class="block text-sm font-medium mb-1">Name</label>
-                    <input type="text" id="leadName" name="leadName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="Full name">
+                    <label for="leadName" class="block text-sm font-medium mb-1.5 text-gray-700">Name</label>
+                    <input type="text" id="leadName" name="leadName" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="Full name">
                 </div>
                 <div>
-                    <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="(250) 555-0100">
+                    <label for="phone" class="block text-sm font-medium mb-1.5 text-gray-700">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="(250) 555-0100">
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
-                    <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="you@example.com">
+                    <label for="email" class="block text-sm font-medium mb-1.5 text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="you@example.com">
                 </div>
                 <div>
-                    <label for="propertyAddress" class="block text-sm font-medium mb-1">Property Address</label>
-                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="123 Lakeshore Dr, Penticton, BC">
+                    <label for="propertyAddress" class="block text-sm font-medium mb-1.5 text-gray-700">Property Address</label>
+                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="123 Lakeshore Dr, Penticton, BC">
                 </div>
                 <div>
-                    <label for="propertyType" class="block text-sm font-medium mb-1">Property Type</label>
-                    <select id="propertyType" name="propertyType" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                    <label for="propertyType" class="block text-sm font-medium mb-1.5 text-gray-700">Property Type</label>
+                    <select id="propertyType" name="propertyType" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white">
                         <option value="">Select Option</option>
                         <option value="single-family">Single Family Home</option>
                         <option value="waterfront-estate">Waterfront Estate / Cottage</option>
@@ -156,12 +318,12 @@
                     </select>
                 </div>
                 <div>
-                    <label for="propertyArea" class="block text-sm font-medium mb-1">Property Area / Neighborhood</label>
-                    <input type="text" id="propertyArea" name="propertyArea" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="e.g. West Bench, Trout Creek, Summerland">
+                    <label for="propertyArea" class="block text-sm font-medium mb-1.5 text-gray-700">Property Area / Neighborhood</label>
+                    <input type="text" id="propertyArea" name="propertyArea" class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="e.g. West Bench, Trout Creek, Summerland">
                 </div>
                 <div>
-                    <label for="absencePeriod" class="block text-sm font-medium mb-1">Typical Absence Period</label>
-                    <select id="absencePeriod" name="absencePeriod" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                    <label for="absencePeriod" class="block text-sm font-medium mb-1.5 text-gray-700">Typical Absence Period</label>
+                    <select id="absencePeriod" name="absencePeriod" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white">
                         <option value="">Select Option</option>
                         <option value="1-2-weeks">1-2 Weeks</option>
                         <option value="2-4-weeks">2-4 Weeks</option>
@@ -170,71 +332,118 @@
                     </select>
                 </div>
                 <div>
-                    <label for="additionalDetails" class="block text-sm font-medium mb-1">Additional Details / Special Requests</label>
-                    <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="Any specific concerns or requests for your property..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none"></textarea>
+                    <label for="additionalDetails" class="block text-sm font-medium mb-1.5 text-gray-700">Additional Details / Special Requests</label>
+                    <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="Any specific concerns or requests for your property..." class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-accent text-brand font-bold py-4 rounded-lg hover:bg-yellow-400 transition text-lg">Send My Free Quote Request</button>
+                <button type="submit" class="w-full bg-accent-500 text-white font-semibold py-4 rounded-lg hover:bg-accent-600 transition text-lg">Send My Free Quote Request</button>
                 <div id="formMessage" class="hidden text-center py-3 rounded-lg font-medium"></div>
             </form>
-
-            <script>
-                document.getElementById('leadForm').addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    const form = e.target;
-                    const btn = form.querySelector('button[type="submit"]');
-                    const msg = document.getElementById('formMessage');
-
-                    btn.disabled = true;
-                    btn.textContent = 'Sending...';
-                    msg.classList.add('hidden');
-
-                    const payload = {
-                        source: form.querySelector('[name="source"]').value,
-                        market: form.querySelector('[name="market"]').value,
-                        leadName: form.leadName.value,
-                        phone: form.phone.value,
-                        email: form.email.value,
-                        propertyAddress: form.propertyAddress.value,
-                        propertyType: form.propertyType.value,
-                        propertyArea: form.propertyArea.value,
-                        absencePeriod: form.absencePeriod.value,
-                        additionalDetails: form.additionalDetails.value
-                    };
-
-                    try {
-                        const response = await fetch('https://hook.us2.make.com/eda7bdamr3auqwdbkhtm78et2r3r5i46', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        if (response.ok) {
-                            msg.textContent = 'Thank you! We\'ll be in touch shortly.';
-                            msg.className = 'text-center py-3 rounded-lg font-medium bg-green-100 text-green-800';
-                            form.reset();
-                        } else {
-                            throw new Error('Server responded with ' + response.status);
-                        }
-                    } catch (error) {
-                        msg.textContent = 'Something went wrong. Please try again or call us directly.';
-                        msg.className = 'text-center py-3 rounded-lg font-medium bg-red-100 text-red-800';
-                    } finally {
-                        btn.disabled = false;
-                        btn.textContent = 'Send My Free Quote Request';
-                    }
-                });
-            </script>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand text-white py-10">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-lg font-bold mb-2">Pen Home Watch</p>
-            <p class="text-gray-300 mb-4">Professional Home Watch Services — Penticton & Summerland, BC</p>
-            <p class="text-sm text-gray-400">&copy; 2026 Pen Home Watch. All rights reserved.</p>
+    <footer class="bg-brand-500 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">P</span>
+                        </div>
+                        <span class="text-xl font-bold">Pen Home Watch</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Professional home watch services protecting properties across Penticton, Summerland, and the South Okanagan since 2019.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#services" class="block text-gray-300 hover:text-white transition">Services</a>
+                        <a href="#about" class="block text-gray-300 hover:text-white transition">About Us</a>
+                        <a href="#areas" class="block text-gray-300 hover:text-white transition">Service Areas</a>
+                        <a href="#contact" class="block text-gray-300 hover:text-white transition">Get a Quote</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>Penticton, BC</p>
+                        <p>info@penhomewatch.ca</p>
+                        <p>(250) 555-0142</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2026 Pen Home Watch. All rights reserved. Insured & Bonded. NHWA Accredited.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const msg = document.getElementById('formMessage');
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            msg.classList.add('hidden');
+
+            const payload = {
+                source: form.querySelector('[name="source"]').value,
+                market: form.querySelector('[name="market"]').value,
+                leadName: form.leadName.value,
+                phone: form.phone.value,
+                email: form.email.value,
+                propertyAddress: form.propertyAddress.value,
+                propertyType: form.propertyType.value,
+                propertyArea: form.propertyArea.value,
+                absencePeriod: form.absencePeriod.value,
+                additionalDetails: form.additionalDetails.value
+            };
+
+            try {
+                const response = await fetch('https://hook.us2.make.com/eda7bdamr3auqwdbkhtm78et2r3r5i46', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    msg.textContent = 'Thank you! We\'ll be in touch within 24 hours.';
+                    msg.className = 'text-center py-3 rounded-lg font-medium bg-green-100 text-green-800';
+                    form.reset();
+                } else {
+                    throw new Error('Server responded with ' + response.status);
+                }
+            } catch (error) {
+                msg.textContent = 'Something went wrong. Please try again or call us directly at (250) 555-0142.';
+                msg.className = 'text-center py-3 rounded-lg font-medium bg-red-100 text-red-800';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Send My Free Quote Request';
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

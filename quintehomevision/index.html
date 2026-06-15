@@ -3,154 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quinte Home Vision — Trusted Home Watch Services in Belleville, Quinte & Prince Edward County</title>
+    <title>Quinte Home Vision — Professional Home Watch Services in Belleville, Quinte & Prince Edward County</title>
+    <meta name="description" content="Trusted home watch and property care for seasonal residents, cottagers, and absentee homeowners in Belleville, Quinte West, and Prince Edward County, Ontario.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: '#4a2c6b',
-                        accent: '#10b981',
+                        brand: { 50: '#f5f0fa', 100: '#e8dbf3', 200: '#d1b7e8', 300: '#b48dd8', 400: '#9463c4', 500: '#4a2c6b', 600: '#3f265b', 700: '#331f4b', 800: '#28193b', 900: '#1d122b' },
+                        accent: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Georgia', 'serif'],
                     }
                 }
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-hero { background: linear-gradient(135deg, #4a2c6b 0%, #6b3fa0 50%, #4a2c6b 100%); }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .stat-gradient { background: linear-gradient(135deg, #10b981 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">Q</span>
+                </div>
+                <span class="text-xl font-bold text-brand-500">Quinte Home Vision</span>
+            </a>
+            <div class="space-x-8 hidden md:flex items-center">
+                <a href="#services" class="text-gray-600 hover:text-brand-500 transition font-medium">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-brand-500 transition font-medium">About</a>
+                <a href="#areas" class="text-gray-600 hover:text-brand-500 transition font-medium">Areas</a>
+                <a href="#contact" class="bg-accent-500 text-white px-5 py-2.5 rounded-lg hover:bg-accent-600 transition font-medium">Get a Quote</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+            <a href="#services" class="block text-gray-600 hover:text-brand-500 font-medium">Services</a>
+            <a href="#about" class="block text-gray-600 hover:text-brand-500 font-medium">About</a>
+            <a href="#areas" class="block text-gray-600 hover:text-brand-500 font-medium">Areas</a>
+            <a href="#contact" class="block bg-accent-500 text-white px-5 py-2.5 rounded-lg text-center font-medium">Get a Quote</a>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <header class="bg-brand text-white">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">Quinte Home Vision</div>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#services" class="hover:text-accent transition">Services</a>
-                <a href="#areas" class="hover:text-accent transition">Service Areas</a>
-                <a href="#contact" class="hover:text-accent transition">Get a Quote</a>
+    <header class="gradient-hero text-white pt-28 pb-20 md:pt-36 md:pb-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <p class="text-accent-400 font-medium mb-4 tracking-wide uppercase text-sm">Eastern Ontario's Trusted Home Watch</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Protecting Quinte Region<br>Properties Year-Round</h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">Professional home watch and property care for cottagers, seasonal residents, and absentee homeowners across Belleville, Quinte West, and Prince Edward County.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="inline-block bg-accent-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-accent-600 transition text-center">Request Free Consultation</a>
+                    <a href="#services" class="inline-block border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition text-center">View Services</a>
+                </div>
             </div>
-        </nav>
-        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Peace of Mind for Your<br>Quinte Region Property</h1>
-            <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">Professional home watch and property care for seasonal residents, cottagers, and absentee homeowners in Belleville, Quinte West, and Prince Edward County.</p>
-            <a href="#contact" class="inline-block bg-accent text-white font-bold px-8 py-4 rounded-lg hover:bg-emerald-600 transition">Request Your Free Consultation</a>
         </div>
     </header>
 
-    <!-- Value Proposition -->
-    <section class="py-16 bg-gray-50">
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-gray-50 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-brand">Why Quinte Region Homeowners Choose Us</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">🏡</div>
-                    <h3 class="text-xl font-bold mb-3">Cottage & Country Home Care</h3>
-                    <p class="text-gray-600">From PEC waterfront cottages to Belleville estates, we understand the unique needs of rural and lakeside properties in Eastern Ontario.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">175+</p>
+                    <p class="text-gray-500 text-sm mt-1">Properties Monitored</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">🌊</div>
-                    <h3 class="text-xl font-bold mb-3">Waterfront Specialists</h3>
-                    <p class="text-gray-600">Bay of Quinte and Lake Ontario properties face unique challenges—flooding, erosion, and dock maintenance. We watch for it all.</p>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">7+</p>
+                    <p class="text-gray-500 text-sm mt-1">Years Experience</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">📱</div>
-                    <h3 class="text-xl font-bold mb-3">Real-Time Updates</h3>
-                    <p class="text-gray-600">Photo reports after every visit, plus immediate alerts if we detect anything that needs your attention. Stay connected from anywhere.</p>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">100%</p>
+                    <p class="text-gray-500 text-sm mt-1">Insured & Bonded</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">24/7</p>
+                    <p class="text-gray-500 text-sm mt-1">Emergency Response</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-16">
+    <section id="services" class="py-20">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-brand">Our Services</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Home Watch Inspections</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Full interior & exterior inspections</li>
-                        <li>✓ Basement & crawlspace moisture checks</li>
-                        <li>✓ Furnace, well pump & septic monitoring</li>
-                        <li>✓ Security & entry point verification</li>
-                    </ul>
+            <div class="text-center mb-16">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">What We Do</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500">Complete Property Care for the Quinte Region</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">From Bay of Quinte waterfront homes to PEC wine country estates, we deliver property monitoring tailored to Eastern Ontario's unique needs.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Home Watch Inspections</h3>
+                    <p class="text-gray-500 leading-relaxed">Full interior and exterior inspections including basement moisture checks, furnace monitoring, well pump and septic verification.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Cottage & Seasonal Care</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Spring opening & fall closing</li>
-                        <li>✓ Dock & waterfront inspection</li>
-                        <li>✓ Water system winterization</li>
-                        <li>✓ Pest & rodent monitoring</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Cottage & Waterfront Care</h3>
+                    <p class="text-gray-500 leading-relaxed">Dock and shoreline inspection, water system winterization, spring opening, and pest monitoring for lakeside properties.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Property Concierge</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Contractor & tradesperson access</li>
-                        <li>✓ Mail collection & forwarding</li>
-                        <li>✓ Pre-arrival home preparation</li>
-                        <li>✓ Lawn & snow removal coordination</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Seasonal Property Prep</h3>
+                    <p class="text-gray-500 leading-relaxed">Fall closing, spring opening, water system management, gutter cleaning coordination, and storm-readiness checks.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Vacation Rental Management</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Guest turnover inspections</li>
-                        <li>✓ PEC wine-country rental support</li>
-                        <li>✓ Cleaning & restocking coordination</li>
-                        <li>✓ Damage assessment & reporting</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Property Concierge</h3>
+                    <p class="text-gray-500 leading-relaxed">Contractor access, mail collection, pre-arrival preparation, lawn and snow removal coordination on your behalf.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Emergency Response</h3>
+                    <p class="text-gray-500 leading-relaxed">24/7 emergency availability with rapid on-site assessment, insurance documentation, and emergency repair coordination.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Vacation Rental Support</h3>
+                    <p class="text-gray-500 leading-relaxed">PEC wine-country rental management, guest turnover inspections, cleaning coordination, and damage documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">About Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-500 mb-6">Quinte Region Locals Who Know Your Property Needs</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">Quinte Home Vision was established in 2018 by James and Rachel Connors, born-and-raised Quinte Region residents with deep roots in the community. After 20 years in facility management and property maintenance, they launched Quinte Home Vision to serve the growing number of seasonal and absentee property owners in the area.</p>
+                    <p class="text-gray-600 leading-relaxed mb-4">With Prince Edward County's boom as a tourist destination and Belleville's growth attracting out-of-town investors, the need for professional, reliable property monitoring has never been greater. Their team of certified home watch professionals now serves over 175 properties across the region.</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">As proud members of the National Home Watch Association and active participants in the Quinte & District Real Estate Board community, they bring credibility, local knowledge, and genuine care to every client relationship.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">NHWA Accredited</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Fully Insured</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Bonded</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Background Checked</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-brand-500 mb-6">Why Quinte Region Homeowners Choose Us</h3>
+                    <div class="space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Waterfront Property Experts</p>
+                                <p class="text-gray-500 text-sm">We understand the unique challenges of Bay of Quinte and Lake Ontario waterfront properties.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">PEC Wine Country Coverage</p>
+                                <p class="text-gray-500 text-sm">Dedicated service throughout Prince Edward County for vacation rental and estate owners.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Rural & Well/Septic Knowledge</p>
+                                <p class="text-gray-500 text-sm">We know rural properties — well pumps, septic systems, gravel roads, and country living.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Photo Reports Every Visit</p>
+                                <p class="text-gray-500 text-sm">Detailed documentation with timestamps delivered directly to your inbox.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Testimonials</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500">What Our Clients Say</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"We bought a cottage near Sandbanks and live in Toronto. Quinte Home Vision gives us total confidence that everything is secure between our visits."</p>
+                    <p class="font-semibold text-gray-800">— Alan & Christine W.</p>
+                    <p class="text-gray-400 text-sm">PEC cottage owners, clients since 2019</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"They spotted a sump pump failure during a February check. Without them, our entire basement would have flooded. Absolutely invaluable service."</p>
+                    <p class="font-semibold text-gray-800">— Diane R.</p>
+                    <p class="text-gray-400 text-sm">Belleville homeowner, winter in Florida</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"We run a vacation rental in Wellington and live in Ottawa. They handle turnovers, inspections, and all the local coordination. Could not run our business without them."</p>
+                    <p class="font-semibold text-gray-800">— Priya & Rajan S.</p>
+                    <p class="text-gray-400 text-sm">Wellington vacation rental owners</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Areas -->
-    <section id="areas" class="py-16 bg-gray-50">
+    <section id="areas" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8 text-brand">Serving the Quinte Region & Prince Edward County</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">From the Bay of Quinte shoreline to the vineyards and sandbanks of Prince Edward County, we protect properties across the region.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Belleville</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Quinte West</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Prince Edward County</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Picton</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Wellington</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Consecon</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Trenton</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Brighton</span>
+            <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Coverage</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-500">Serving the Quinte Region & Prince Edward County</h2>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto">From the Bay of Quinte shoreline to the vineyards and sandbanks of Prince Edward County, we protect properties across the region.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Belleville</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Quinte West</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Prince Edward County</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Picton</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Wellington</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Consecon</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Trenton</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Brighton</span>
             </div>
         </div>
     </section>
 
     <!-- Contact / Lead Form -->
-    <section id="contact" class="py-16">
+    <section id="contact" class="py-20">
         <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-4 text-brand">Get Your Free Home Watch Quote</h2>
-            <p class="text-center text-gray-600 mb-8">Tell us about your Belleville, Quinte, or PEC property and we'll build a customized care plan.</p>
-            <form id="leadForm" class="space-y-6">
+            <div class="text-center mb-10">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Get Started</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500 mb-4">Request Your Free Quote</h2>
+                <p class="text-gray-500">Tell us about your Belleville, Quinte, or PEC property and we'll build a customized care plan.</p>
+            </div>
+            <form id="leadForm" class="space-y-5 bg-gray-50 p-8 rounded-2xl border border-gray-100">
                 <input type="hidden" name="source" value="quintehomevision-landing">
                 <input type="hidden" name="market" value="belleville-quinte-pec">
                 <div>
-                    <label for="leadName" class="block text-sm font-medium mb-1">Name</label>
-                    <input type="text" id="leadName" name="leadName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="Full name">
+                    <label for="leadName" class="block text-sm font-medium mb-1.5 text-gray-700">Name</label>
+                    <input type="text" id="leadName" name="leadName" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="Full name">
                 </div>
                 <div>
-                    <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="(613) 555-0100">
+                    <label for="phone" class="block text-sm font-medium mb-1.5 text-gray-700">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="(613) 555-0100">
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
-                    <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="you@example.com">
+                    <label for="email" class="block text-sm font-medium mb-1.5 text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="you@example.com">
                 </div>
                 <div>
-                    <label for="propertyAddress" class="block text-sm font-medium mb-1">Property Address</label>
-                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="789 County Rd 1, Picton, ON">
+                    <label for="propertyAddress" class="block text-sm font-medium mb-1.5 text-gray-700">Property Address</label>
+                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="789 County Rd 1, Picton, ON">
                 </div>
                 <div>
-                    <label for="propertyType" class="block text-sm font-medium mb-1">Property Type</label>
-                    <select id="propertyType" name="propertyType" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                    <label for="propertyType" class="block text-sm font-medium mb-1.5 text-gray-700">Property Type</label>
+                    <select id="propertyType" name="propertyType" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white">
                         <option value="">Select Option</option>
                         <option value="single-family">Single Family Home</option>
                         <option value="waterfront-estate">Waterfront Estate / Cottage</option>
@@ -159,12 +321,12 @@
                     </select>
                 </div>
                 <div>
-                    <label for="propertyArea" class="block text-sm font-medium mb-1">Property Area / Neighborhood</label>
-                    <input type="text" id="propertyArea" name="propertyArea" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="e.g. Wellington, Sandbanks, West Belleville">
+                    <label for="propertyArea" class="block text-sm font-medium mb-1.5 text-gray-700">Property Area / Neighborhood</label>
+                    <input type="text" id="propertyArea" name="propertyArea" class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="e.g. Wellington, Sandbanks, West Belleville">
                 </div>
                 <div>
-                    <label for="absencePeriod" class="block text-sm font-medium mb-1">Typical Absence Period</label>
-                    <select id="absencePeriod" name="absencePeriod" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                    <label for="absencePeriod" class="block text-sm font-medium mb-1.5 text-gray-700">Typical Absence Period</label>
+                    <select id="absencePeriod" name="absencePeriod" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white">
                         <option value="">Select Option</option>
                         <option value="1-2-weeks">1-2 Weeks</option>
                         <option value="2-4-weeks">2-4 Weeks</option>
@@ -173,71 +335,118 @@
                     </select>
                 </div>
                 <div>
-                    <label for="additionalDetails" class="block text-sm font-medium mb-1">Additional Details / Special Requests</label>
-                    <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="Any specific concerns or requests for your property..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none"></textarea>
+                    <label for="additionalDetails" class="block text-sm font-medium mb-1.5 text-gray-700">Additional Details / Special Requests</label>
+                    <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="Any specific concerns or requests for your property..." class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-accent text-white font-bold py-4 rounded-lg hover:bg-emerald-600 transition text-lg">Send My Free Quote Request</button>
+                <button type="submit" class="w-full bg-accent-500 text-white font-semibold py-4 rounded-lg hover:bg-accent-600 transition text-lg">Send My Free Quote Request</button>
                 <div id="formMessage" class="hidden text-center py-3 rounded-lg font-medium"></div>
             </form>
-
-            <script>
-                document.getElementById('leadForm').addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    const form = e.target;
-                    const btn = form.querySelector('button[type="submit"]');
-                    const msg = document.getElementById('formMessage');
-
-                    btn.disabled = true;
-                    btn.textContent = 'Sending...';
-                    msg.classList.add('hidden');
-
-                    const payload = {
-                        source: form.querySelector('[name="source"]').value,
-                        market: form.querySelector('[name="market"]').value,
-                        leadName: form.leadName.value,
-                        phone: form.phone.value,
-                        email: form.email.value,
-                        propertyAddress: form.propertyAddress.value,
-                        propertyType: form.propertyType.value,
-                        propertyArea: form.propertyArea.value,
-                        absencePeriod: form.absencePeriod.value,
-                        additionalDetails: form.additionalDetails.value
-                    };
-
-                    try {
-                        const response = await fetch('https://hook.us2.make.com/eda7bdamr3auqwdbkhtm78et2r3r5i46', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        if (response.ok) {
-                            msg.textContent = 'Thank you! We\'ll be in touch shortly.';
-                            msg.className = 'text-center py-3 rounded-lg font-medium bg-green-100 text-green-800';
-                            form.reset();
-                        } else {
-                            throw new Error('Server responded with ' + response.status);
-                        }
-                    } catch (error) {
-                        msg.textContent = 'Something went wrong. Please try again or call us directly.';
-                        msg.className = 'text-center py-3 rounded-lg font-medium bg-red-100 text-red-800';
-                    } finally {
-                        btn.disabled = false;
-                        btn.textContent = 'Send My Free Quote Request';
-                    }
-                });
-            </script>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand text-white py-10">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-lg font-bold mb-2">Quinte Home Vision</p>
-            <p class="text-gray-300 mb-4">Professional Home Watch Services — Belleville, Quinte & Prince Edward County, ON</p>
-            <p class="text-sm text-gray-400">&copy; 2026 Quinte Home Vision. All rights reserved.</p>
+    <footer class="bg-brand-500 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">Q</span>
+                        </div>
+                        <span class="text-xl font-bold">Quinte Home Vision</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Professional home watch services protecting properties across Belleville, Quinte West, and Prince Edward County since 2018.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#services" class="block text-gray-300 hover:text-white transition">Services</a>
+                        <a href="#about" class="block text-gray-300 hover:text-white transition">About Us</a>
+                        <a href="#areas" class="block text-gray-300 hover:text-white transition">Service Areas</a>
+                        <a href="#contact" class="block text-gray-300 hover:text-white transition">Get a Quote</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>Belleville, ON</p>
+                        <p>info@quintehomevision.ca</p>
+                        <p>(613) 555-0193</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2026 Quinte Home Vision. All rights reserved. Insured & Bonded. NHWA Accredited.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const msg = document.getElementById('formMessage');
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            msg.classList.add('hidden');
+
+            const payload = {
+                source: form.querySelector('[name="source"]').value,
+                market: form.querySelector('[name="market"]').value,
+                leadName: form.leadName.value,
+                phone: form.phone.value,
+                email: form.email.value,
+                propertyAddress: form.propertyAddress.value,
+                propertyType: form.propertyType.value,
+                propertyArea: form.propertyArea.value,
+                absencePeriod: form.absencePeriod.value,
+                additionalDetails: form.additionalDetails.value
+            };
+
+            try {
+                const response = await fetch('https://hook.us2.make.com/eda7bdamr3auqwdbkhtm78et2r3r5i46', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    msg.textContent = 'Thank you! We\'ll be in touch within 24 hours.';
+                    msg.className = 'text-center py-3 rounded-lg font-medium bg-green-100 text-green-800';
+                    form.reset();
+                } else {
+                    throw new Error('Server responded with ' + response.status);
+                }
+            } catch (error) {
+                msg.textContent = 'Something went wrong. Please try again or call us directly at (613) 555-0193.';
+                msg.className = 'text-center py-3 rounded-lg font-medium bg-red-100 text-red-800';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Send My Free Quote Request';
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>

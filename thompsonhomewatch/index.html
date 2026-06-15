@@ -3,153 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thompson Home Watch — Trusted Home Watch Services in Kamloops & Thompson Valley</title>
+    <title>Thompson Home Watch — Professional Home Watch Services in Kamloops & Thompson Valley, BC</title>
+    <meta name="description" content="Reliable home watch and property monitoring for snowbirds and absentee homeowners in Kamloops, Sun Peaks, and the Thompson Valley.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        brand: '#2d4a3e',
-                        accent: '#ef4444',
+                        brand: { 50: '#f0f7f4', 100: '#d9ede3', 200: '#b3dbc7', 300: '#80c4a5', 400: '#4da882', 500: '#2d4a3e', 600: '#253f35', 700: '#1d332b', 800: '#162821', 900: '#0f1d17' },
+                        accent: { 50: '#fef2f2', 100: '#fee2e2', 200: '#fecaca', 300: '#fca5a5', 400: '#f87171', 500: '#ef4444', 600: '#dc2626', 700: '#b91c1c' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Georgia', 'serif'],
                     }
                 }
             }
         }
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .gradient-hero { background: linear-gradient(135deg, #2d4a3e 0%, #3d6a55 50%, #2d4a3e 100%); }
+        .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .stat-gradient { background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-brand-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">T</span>
+                </div>
+                <span class="text-xl font-bold text-brand-500">Thompson Home Watch</span>
+            </a>
+            <div class="space-x-8 hidden md:flex items-center">
+                <a href="#services" class="text-gray-600 hover:text-brand-500 transition font-medium">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-brand-500 transition font-medium">About</a>
+                <a href="#areas" class="text-gray-600 hover:text-brand-500 transition font-medium">Areas</a>
+                <a href="#contact" class="bg-accent-500 text-white px-5 py-2.5 rounded-lg hover:bg-accent-600 transition font-medium">Get a Quote</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+            <a href="#services" class="block text-gray-600 hover:text-brand-500 font-medium">Services</a>
+            <a href="#about" class="block text-gray-600 hover:text-brand-500 font-medium">About</a>
+            <a href="#areas" class="block text-gray-600 hover:text-brand-500 font-medium">Areas</a>
+            <a href="#contact" class="block bg-accent-500 text-white px-5 py-2.5 rounded-lg text-center font-medium">Get a Quote</a>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <header class="bg-brand text-white">
-        <nav class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">Thompson Home Watch</div>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#services" class="hover:text-accent transition">Services</a>
-                <a href="#areas" class="hover:text-accent transition">Service Areas</a>
-                <a href="#contact" class="hover:text-accent transition">Get a Quote</a>
+    <header class="gradient-hero text-white pt-28 pb-20 md:pt-36 md:pb-28">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <p class="text-accent-400 font-medium mb-4 tracking-wide uppercase text-sm">Protecting Thompson Valley Properties</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Kamloops Home Watch<br>You Can Count On</h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed">Professional property monitoring built for Thompson Valley's extreme climate. From brutal winters to wildfire seasons, we keep your home safe year-round.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="inline-block bg-accent-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-accent-600 transition text-center">Request Free Consultation</a>
+                    <a href="#services" class="inline-block border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-lg hover:bg-white/10 transition text-center">View Services</a>
+                </div>
             </div>
-        </nav>
-        <div class="max-w-6xl mx-auto px-6 py-20 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6">Protecting Thompson Valley Homes<br>While You're Away</h1>
-            <p class="text-xl mb-8 text-gray-200 max-w-2xl mx-auto">Reliable home watch and property management for snowbirds, seasonal residents, and absentee homeowners throughout Kamloops and the Thompson region.</p>
-            <a href="#contact" class="inline-block bg-accent text-white font-bold px-8 py-4 rounded-lg hover:bg-red-600 transition">Request Your Free Consultation</a>
         </div>
     </header>
 
-    <!-- Value Proposition -->
-    <section class="py-16 bg-gray-50">
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-gray-50 border-b border-gray-100">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-brand">Why Kamloops Homeowners Trust Us</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">❄️</div>
-                    <h3 class="text-xl font-bold mb-3">Winter-Ready Monitoring</h3>
-                    <p class="text-gray-600">Kamloops winters are harsh. We monitor for frozen pipes, ice dams, snow loads, and heating failures before they become catastrophic.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">150+</p>
+                    <p class="text-gray-500 text-sm mt-1">Properties Protected</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">🔥</div>
-                    <h3 class="text-xl font-bold mb-3">Wildfire Season Vigilance</h3>
-                    <p class="text-gray-600">During fire season, we watch for ember intrusion, air quality impacts, and evacuation notices so your property is never unattended.</p>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">5+</p>
+                    <p class="text-gray-500 text-sm mt-1">Years Serving Kamloops</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm text-center">
-                    <div class="text-4xl mb-4">📸</div>
-                    <h3 class="text-xl font-bold mb-3">Photo-Documented Reports</h3>
-                    <p class="text-gray-600">Every visit includes timestamped photos and a detailed report delivered to your inbox—complete transparency, every time.</p>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">100%</p>
+                    <p class="text-gray-500 text-sm mt-1">Insured & Bonded</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold stat-gradient">24/7</p>
+                    <p class="text-gray-500 text-sm mt-1">Emergency Response</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-16">
+    <section id="services" class="py-20">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12 text-brand">Our Services</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Home Watch Inspections</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Full interior & exterior walkthroughs</li>
-                        <li>✓ Heating system & thermostat verification</li>
-                        <li>✓ Water ingress & plumbing checks</li>
-                        <li>✓ Security & alarm system testing</li>
-                    </ul>
+            <div class="text-center mb-16">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">What We Do</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500">Built for Thompson Valley's Climate</h2>
+                <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Kamloops has unique challenges — extreme cold, wildfire risk, and dramatic temperature swings. Our services are designed specifically for this region.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Home Watch Inspections</h3>
+                    <p class="text-gray-500 leading-relaxed">Complete interior and exterior inspections with heating system verification, plumbing checks, and security system testing.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Seasonal Property Prep</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Fall winterization & spring opening</li>
-                        <li>✓ Irrigation system blowouts</li>
-                        <li>✓ Gutter cleaning coordination</li>
-                        <li>✓ Wildfire defensible-space prep</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-accent-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Wildfire Season Readiness</h3>
+                    <p class="text-gray-500 leading-relaxed">FireSmart compliance checks, defensible space maintenance, ember-resistant vent monitoring, and evacuation alert response.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Concierge & Key Holder</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ Contractor & repair crew access</li>
-                        <li>✓ Mail & parcel management</li>
-                        <li>✓ Pre-arrival home readiness</li>
-                        <li>✓ Utility & vendor coordination</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Winter Protection</h3>
+                    <p class="text-gray-500 leading-relaxed">Frozen pipe prevention, ice dam monitoring, snow load assessment, heating failure alerts, and winterization services.</p>
                 </div>
-                <div class="border border-gray-200 rounded-xl p-8">
-                    <h3 class="text-xl font-bold mb-3">Emergency Response</h3>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>✓ 24/7 emergency availability</li>
-                        <li>✓ Rapid on-site assessment</li>
-                        <li>✓ Insurance documentation support</li>
-                        <li>✓ Emergency repair coordination</li>
-                    </ul>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Concierge & Key Holder</h3>
+                    <p class="text-gray-500 leading-relaxed">Contractor access, mail management, pre-arrival preparation, and utility coordination when you're away.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Emergency Response</h3>
+                    <p class="text-gray-500 leading-relaxed">24/7 emergency availability with rapid on-site assessment, insurance documentation, and emergency repair coordination.</p>
+                </div>
+                <div class="bg-white border border-gray-100 rounded-2xl p-8 card-hover">
+                    <div class="w-12 h-12 bg-brand-50 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Sun Peaks Property Care</h3>
+                    <p class="text-gray-500 leading-relaxed">Specialized ski property management including snow removal coordination, access checks, and seasonal opening/closing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">About Us</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-500 mb-6">Thompson Valley Locals Protecting Your Investment</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">Thompson Home Watch was founded in 2020 by Mike and Karen Aldridge, a husband-and-wife team who spent over 15 years in Kamloops real estate before recognizing an urgent gap in the local market.</p>
+                    <p class="text-gray-600 leading-relaxed mb-4">With Kamloops growing as a retirement and recreational destination — and Sun Peaks attracting out-of-province property owners — they saw hundreds of homes sitting unmonitored through dangerous wildfire seasons and -30°C winter stretches.</p>
+                    <p class="text-gray-600 leading-relaxed mb-6">Today, Thompson Home Watch monitors over 150 properties from downtown Kamloops to the slopes of Sun Peaks. Their team is trained in FireSmart protocols and holds certifications from the National Home Watch Association.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">NHWA Certified</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">FireSmart Trained</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Fully Insured</span>
+                        <span class="bg-brand-50 text-brand-500 px-4 py-2 rounded-full text-sm font-medium">Bonded</span>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                    <h3 class="text-xl font-bold text-brand-500 mb-6">Why Kamloops Homeowners Choose Us</h3>
+                    <div class="space-y-5">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Wildfire Season Specialists</p>
+                                <p class="text-gray-500 text-sm">FireSmart-trained team that monitors evacuation alerts and protects your property proactively.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Extreme Winter Experience</p>
+                                <p class="text-gray-500 text-sm">We know what -35°C does to pipes, roofs, and driveways. We've seen it all and know how to prevent it.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Sun Peaks Coverage</p>
+                                <p class="text-gray-500 text-sm">Dedicated routes to Sun Peaks for ski property owners who need regular monitoring.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <svg class="w-4 h-4 text-accent-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Photo Reports Every Visit</p>
+                                <p class="text-gray-500 text-sm">Detailed documentation with timestamps so you always know exactly what's happening.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Testimonials</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500">What Our Clients Say</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"During the 2023 wildfire season, Mike personally checked our property twice a day when the evacuation order was lifted. That kind of dedication is rare."</p>
+                    <p class="font-semibold text-gray-800">— Greg & Donna P.</p>
+                    <p class="text-gray-400 text-sm">Barnhartvale homeowners</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"We own a Sun Peaks ski cabin and live in Vancouver. Thompson Home Watch handles everything — we just show up and enjoy."</p>
+                    <p class="font-semibold text-gray-800">— The Nakamura Family</p>
+                    <p class="text-gray-400 text-sm">Sun Peaks property owners</p>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-gray-600 mb-4 italic">"Our furnace died in January while we were in Mexico. They caught it within hours and had a repair crew there the same day. Saved us from a frozen disaster."</p>
+                    <p class="font-semibold text-gray-800">— Richard M.</p>
+                    <p class="text-gray-400 text-sm">Westsyde snowbird, client since 2021</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Service Areas -->
-    <section id="areas" class="py-16 bg-gray-50">
+    <section id="areas" class="py-20 bg-gray-50">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-8 text-brand">Serving the Thompson Valley & Beyond</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">From Kamloops to Sun Peaks and surrounding Thompson Valley communities, we keep your property safe and secure year-round.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Kamloops</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Sun Peaks</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Westsyde</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Brocklehurst</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Barnhartvale</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Chase</span>
-                <span class="bg-brand text-white px-5 py-2 rounded-full">Savona</span>
+            <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Coverage</p>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-brand-500">Serving the Thompson Valley & Beyond</h2>
+            <p class="text-lg text-gray-500 mb-10 max-w-2xl mx-auto">From downtown Kamloops to Sun Peaks Resort and surrounding Thompson Valley communities, we keep your property safe year-round.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Kamloops</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Sun Peaks</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Westsyde</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Brocklehurst</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Barnhartvale</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Chase</span>
+                <span class="bg-brand-500 text-white px-6 py-2.5 rounded-full font-medium">Savona</span>
             </div>
         </div>
     </section>
 
     <!-- Contact / Lead Form -->
-    <section id="contact" class="py-16">
+    <section id="contact" class="py-20">
         <div class="max-w-2xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-4 text-brand">Get Your Free Home Watch Quote</h2>
-            <p class="text-center text-gray-600 mb-8">Tell us about your Kamloops or Thompson Valley property and we'll design a custom watch plan for your needs.</p>
-            <form id="leadForm" class="space-y-6">
+            <div class="text-center mb-10">
+                <p class="text-accent-500 font-medium mb-2 uppercase tracking-wide text-sm">Get Started</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-500 mb-4">Request Your Free Quote</h2>
+                <p class="text-gray-500">Tell us about your Kamloops or Thompson Valley property and we'll design a custom watch plan for your needs.</p>
+            </div>
+            <form id="leadForm" class="space-y-5 bg-gray-50 p-8 rounded-2xl border border-gray-100">
                 <input type="hidden" name="source" value="thompsonhomewatch-landing">
                 <input type="hidden" name="market" value="kamloops-thompson">
                 <div>
-                    <label for="leadName" class="block text-sm font-medium mb-1">Name</label>
-                    <input type="text" id="leadName" name="leadName" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="Full name">
+                    <label for="leadName" class="block text-sm font-medium mb-1.5 text-gray-700">Name</label>
+                    <input type="text" id="leadName" name="leadName" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="Full name">
                 </div>
                 <div>
-                    <label for="phone" class="block text-sm font-medium mb-1">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="(250) 555-0100">
+                    <label for="phone" class="block text-sm font-medium mb-1.5 text-gray-700">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="(250) 555-0100">
                 </div>
                 <div>
-                    <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
-                    <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="you@example.com">
+                    <label for="email" class="block text-sm font-medium mb-1.5 text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="you@example.com">
                 </div>
                 <div>
-                    <label for="propertyAddress" class="block text-sm font-medium mb-1">Property Address</label>
-                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="456 Valley View Rd, Kamloops, BC">
+                    <label for="propertyAddress" class="block text-sm font-medium mb-1.5 text-gray-700">Property Address</label>
+                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="456 Valley View Rd, Kamloops, BC">
                 </div>
                 <div>
-                    <label for="propertyType" class="block text-sm font-medium mb-1">Property Type</label>
-                    <select id="propertyType" name="propertyType" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                    <label for="propertyType" class="block text-sm font-medium mb-1.5 text-gray-700">Property Type</label>
+                    <select id="propertyType" name="propertyType" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white">
                         <option value="">Select Option</option>
                         <option value="single-family">Single Family Home</option>
                         <option value="waterfront-estate">Waterfront Estate / Cottage</option>
@@ -158,12 +320,12 @@
                     </select>
                 </div>
                 <div>
-                    <label for="propertyArea" class="block text-sm font-medium mb-1">Property Area / Neighborhood</label>
-                    <input type="text" id="propertyArea" name="propertyArea" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none" placeholder="e.g. Westsyde, Barnhartvale, Sun Peaks">
+                    <label for="propertyArea" class="block text-sm font-medium mb-1.5 text-gray-700">Property Area / Neighborhood</label>
+                    <input type="text" id="propertyArea" name="propertyArea" class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="e.g. Westsyde, Barnhartvale, Sun Peaks">
                 </div>
                 <div>
-                    <label for="absencePeriod" class="block text-sm font-medium mb-1">Typical Absence Period</label>
-                    <select id="absencePeriod" name="absencePeriod" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none">
+                    <label for="absencePeriod" class="block text-sm font-medium mb-1.5 text-gray-700">Typical Absence Period</label>
+                    <select id="absencePeriod" name="absencePeriod" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white">
                         <option value="">Select Option</option>
                         <option value="1-2-weeks">1-2 Weeks</option>
                         <option value="2-4-weeks">2-4 Weeks</option>
@@ -172,71 +334,118 @@
                     </select>
                 </div>
                 <div>
-                    <label for="additionalDetails" class="block text-sm font-medium mb-1">Additional Details / Special Requests</label>
-                    <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="Any specific concerns or requests for your property..." class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent focus:border-accent outline-none"></textarea>
+                    <label for="additionalDetails" class="block text-sm font-medium mb-1.5 text-gray-700">Additional Details / Special Requests</label>
+                    <textarea id="additionalDetails" name="additionalDetails" rows="4" placeholder="Any specific concerns or requests for your property..." class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white"></textarea>
                 </div>
-                <button type="submit" class="w-full bg-accent text-white font-bold py-4 rounded-lg hover:bg-red-600 transition text-lg">Send My Free Quote Request</button>
+                <button type="submit" class="w-full bg-accent-500 text-white font-semibold py-4 rounded-lg hover:bg-accent-600 transition text-lg">Send My Free Quote Request</button>
                 <div id="formMessage" class="hidden text-center py-3 rounded-lg font-medium"></div>
             </form>
-
-            <script>
-                document.getElementById('leadForm').addEventListener('submit', async function(e) {
-                    e.preventDefault();
-                    const form = e.target;
-                    const btn = form.querySelector('button[type="submit"]');
-                    const msg = document.getElementById('formMessage');
-
-                    btn.disabled = true;
-                    btn.textContent = 'Sending...';
-                    msg.classList.add('hidden');
-
-                    const payload = {
-                        source: form.querySelector('[name="source"]').value,
-                        market: form.querySelector('[name="market"]').value,
-                        leadName: form.leadName.value,
-                        phone: form.phone.value,
-                        email: form.email.value,
-                        propertyAddress: form.propertyAddress.value,
-                        propertyType: form.propertyType.value,
-                        propertyArea: form.propertyArea.value,
-                        absencePeriod: form.absencePeriod.value,
-                        additionalDetails: form.additionalDetails.value
-                    };
-
-                    try {
-                        const response = await fetch('https://hook.us2.make.com/eda7bdamr3auqwdbkhtm78et2r3r5i46', {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(payload)
-                        });
-
-                        if (response.ok) {
-                            msg.textContent = 'Thank you! We\'ll be in touch shortly.';
-                            msg.className = 'text-center py-3 rounded-lg font-medium bg-green-100 text-green-800';
-                            form.reset();
-                        } else {
-                            throw new Error('Server responded with ' + response.status);
-                        }
-                    } catch (error) {
-                        msg.textContent = 'Something went wrong. Please try again or call us directly.';
-                        msg.className = 'text-center py-3 rounded-lg font-medium bg-red-100 text-red-800';
-                    } finally {
-                        btn.disabled = false;
-                        btn.textContent = 'Send My Free Quote Request';
-                    }
-                });
-            </script>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-brand text-white py-10">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <p class="text-lg font-bold mb-2">Thompson Home Watch</p>
-            <p class="text-gray-300 mb-4">Professional Home Watch Services — Kamloops & Thompson Valley, BC</p>
-            <p class="text-sm text-gray-400">&copy; 2026 Thompson Home Watch. All rights reserved.</p>
+    <footer class="bg-brand-500 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-lg">T</span>
+                        </div>
+                        <span class="text-xl font-bold">Thompson Home Watch</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">Professional home watch services protecting properties across Kamloops, Sun Peaks, and the Thompson Valley since 2020.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#services" class="block text-gray-300 hover:text-white transition">Services</a>
+                        <a href="#about" class="block text-gray-300 hover:text-white transition">About Us</a>
+                        <a href="#areas" class="block text-gray-300 hover:text-white transition">Service Areas</a>
+                        <a href="#contact" class="block text-gray-300 hover:text-white transition">Get a Quote</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-gray-300">
+                        <p>Kamloops, BC</p>
+                        <p>info@thompsonhomewatch.ca</p>
+                        <p>(250) 555-0187</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center">
+                <p class="text-sm text-gray-400">&copy; 2026 Thompson Home Watch. All rights reserved. Insured & Bonded. NHWA Certified. FireSmart Trained.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
+            const msg = document.getElementById('formMessage');
+
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            msg.classList.add('hidden');
+
+            const payload = {
+                source: form.querySelector('[name="source"]').value,
+                market: form.querySelector('[name="market"]').value,
+                leadName: form.leadName.value,
+                phone: form.phone.value,
+                email: form.email.value,
+                propertyAddress: form.propertyAddress.value,
+                propertyType: form.propertyType.value,
+                propertyArea: form.propertyArea.value,
+                absencePeriod: form.absencePeriod.value,
+                additionalDetails: form.additionalDetails.value
+            };
+
+            try {
+                const response = await fetch('https://hook.us2.make.com/eda7bdamr3auqwdbkhtm78et2r3r5i46', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    msg.textContent = 'Thank you! We\'ll be in touch within 24 hours.';
+                    msg.className = 'text-center py-3 rounded-lg font-medium bg-green-100 text-green-800';
+                    form.reset();
+                } else {
+                    throw new Error('Server responded with ' + response.status);
+                }
+            } catch (error) {
+                msg.textContent = 'Something went wrong. Please try again or call us directly at (250) 555-0187.';
+                msg.className = 'text-center py-3 rounded-lg font-medium bg-red-100 text-red-800';
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Send My Free Quote Request';
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
