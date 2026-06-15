@@ -307,7 +307,17 @@
                 </div>
                 <div>
                     <label for="propertyAddress" class="block text-sm font-medium mb-1.5 text-gray-700">Property Address</label>
-                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="456 Valley View Rd, Kamloops, BC">
+                    <input type="text" id="propertyAddress" name="propertyAddress" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="456 Valley View Rd">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="city" class="block text-sm font-medium mb-1.5 text-gray-700">City</label>
+                        <input type="text" id="city" name="city" required class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white" placeholder="Kamloops">
+                    </div>
+                    <div>
+                        <label for="postalCode" class="block text-sm font-medium mb-1.5 text-gray-700">Postal Code</label>
+                        <input type="text" id="postalCode" name="postalCode" required pattern="[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d" class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:ring-2 focus:ring-accent-500 focus:border-accent-500 outline-none bg-white uppercase" placeholder="V2C 3K1" title="Canadian postal code (e.g. V2C 3K1)">
+                    </div>
                 </div>
                 <div>
                     <label for="propertyType" class="block text-sm font-medium mb-1.5 text-gray-700">Property Type</label>
@@ -405,6 +415,8 @@
                 phone: form.phone.value,
                 email: form.email.value,
                 propertyAddress: form.propertyAddress.value,
+                city: form.city.value,
+                postalCode: form.postalCode.value.toUpperCase(),
                 propertyType: form.propertyType.value,
                 propertyArea: form.propertyArea.value,
                 absencePeriod: form.absencePeriod.value,
