@@ -107,72 +107,156 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-brand-500">Built for Thompson Valley's Climate</h2>
                 <p class="text-gray-500 mt-3 max-w-2xl mx-auto">Kamloops and area has unique challenges — extreme cold, wildfire risk, and dramatic temperature swings. Our services are designed specifically for this region.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white border border-gray-100 rounded-2xl p-6 card-hover">
-                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="service-card border border-gray-200 rounded-xl p-5 cursor-pointer hover:border-brand-300 hover:shadow-sm transition" onclick="this.querySelector('.service-detail').classList.toggle('hidden')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4.5 h-4.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Full Interior & Exterior Checks</h3>
+                                <p class="text-sm text-gray-400">Plumbing/heating verification, security/lighting checks, insurance-compliant logs</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Full Interior & Exterior Checks</h3>
-                    <ul class="text-gray-500 text-sm space-y-1.5">
-                        <li>• Plumbing & heating system verification</li>
-                        <li>• Security & timed lighting checks</li>
-                        <li>• Full insurance-compliant logs</li>
-                    </ul>
+                    <div class="service-detail hidden mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">Comprehensive scheduled walkthroughs of your entire property, inside and out. We verify every system is functioning correctly and document everything for your records and insurance requirements.</p>
+                        <ul class="text-gray-500 text-sm space-y-1.5">
+                            <li>✓ HVAC system operation & thermostat verification</li>
+                            <li>✓ Plumbing inspection — faucets, toilets, water heater, visible pipes</li>
+                            <li>✓ Security system testing & entry point checks</li>
+                            <li>✓ Timed lighting & occupancy simulation</li>
+                            <li>✓ Timestamped photo reports after every visit</li>
+                            <li>✓ Full insurance-compliant documentation logs</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-white border border-gray-100 rounded-2xl p-6 card-hover">
-                    <div class="w-10 h-10 bg-accent-50 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+                <div class="service-card border border-gray-200 rounded-xl p-5 cursor-pointer hover:border-brand-300 hover:shadow-sm transition" onclick="this.querySelector('.service-detail').classList.toggle('hidden')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 bg-accent-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4.5 h-4.5 text-accent-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Wildfire & Storm Readiness</h3>
+                                <p class="text-sm text-gray-400">Defensible space, vent checks, evacuation response</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Wildfire & Storm Readiness</h3>
-                    <ul class="text-gray-500 text-sm space-y-1.5">
-                        <li>• Defensible space clearance</li>
-                        <li>• Ember-resistant vent checks</li>
-                        <li>• Rapid evacuation alert response</li>
-                    </ul>
+                    <div class="service-detail hidden mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">Thompson Valley faces serious wildfire risk every summer. Our FireSmart-trained team proactively monitors your property and responds to evacuation alerts on your behalf.</p>
+                        <ul class="text-gray-500 text-sm space-y-1.5">
+                            <li>✓ Defensible space clearance & vegetation management</li>
+                            <li>✓ Ember-resistant vent and roof inspection</li>
+                            <li>✓ Gutter and debris clearance</li>
+                            <li>✓ Evacuation alert monitoring & rapid response</li>
+                            <li>✓ Post-storm damage assessment & documentation</li>
+                            <li>✓ Insurance-ready photo evidence collection</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-white border border-gray-100 rounded-2xl p-6 card-hover">
-                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                <div class="service-card border border-gray-200 rounded-xl p-5 cursor-pointer hover:border-brand-300 hover:shadow-sm transition" onclick="this.querySelector('.service-detail').classList.toggle('hidden')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4.5 h-4.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Winter Failure Protection</h3>
+                                <p class="text-sm text-gray-400">Frozen pipes, snow loads, 24/7 heating monitoring</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Winter Failure Protection</h3>
-                    <ul class="text-gray-500 text-sm space-y-1.5">
-                        <li>• Frozen pipe & ice dam prevention</li>
-                        <li>• Roof snow load assessments</li>
-                        <li>• 24/7 heating failure monitoring</li>
-                    </ul>
+                    <div class="service-detail hidden mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">Kamloops winters regularly hit -30°C. Unmonitored homes are vulnerable to catastrophic pipe bursts, ice dams, and heating failures. We catch problems before they become disasters.</p>
+                        <ul class="text-gray-500 text-sm space-y-1.5">
+                            <li>✓ Pipe freeze prevention — thermostat & heat trace monitoring</li>
+                            <li>✓ Ice dam detection on rooflines and gutters</li>
+                            <li>✓ Roof snow load assessment after major storms</li>
+                            <li>✓ Furnace operation verification every visit</li>
+                            <li>✓ 24/7 heating failure alert response</li>
+                            <li>✓ Full winterization & spring opening services</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-white border border-gray-100 rounded-2xl p-6 card-hover">
-                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                <div class="service-card border border-gray-200 rounded-xl p-5 cursor-pointer hover:border-brand-300 hover:shadow-sm transition" onclick="this.querySelector('.service-detail').classList.toggle('hidden')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4.5 h-4.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Keyholder & Contractor Access</h3>
+                                <p class="text-sm text-gray-400">Supervised entry, mail/flyer removal, pre-arrival setup</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Keyholder & Contractor Access</h3>
-                    <ul class="text-gray-500 text-sm space-y-1.5">
-                        <li>• Supervised contractor/trade entry</li>
-                        <li>• Mail collection & flyer removal</li>
-                        <li>• Pre-arrival groceries & heating setup</li>
-                    </ul>
+                    <div class="service-detail hidden mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">We act as your trusted local representative. Need a plumber let in? Groceries stocked before you arrive? We handle it all so your home is ready when you are.</p>
+                        <ul class="text-gray-500 text-sm space-y-1.5">
+                            <li>✓ Supervised contractor & tradesperson entry</li>
+                            <li>✓ Mail, package & flyer collection</li>
+                            <li>✓ Pre-arrival home preparation & heating startup</li>
+                            <li>✓ Grocery delivery & restocking coordination</li>
+                            <li>✓ Utility & vendor liaison on your behalf</li>
+                            <li>✓ Vehicle battery & startup checks</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-white border border-gray-100 rounded-2xl p-6 card-hover">
-                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                <div class="service-card border border-gray-200 rounded-xl p-5 cursor-pointer hover:border-brand-300 hover:shadow-sm transition" onclick="this.querySelector('.service-detail').classList.toggle('hidden')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4.5 h-4.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">24/7 Emergency Dispatch</h3>
+                                <p class="text-sm text-gray-400">On-site assessment, photo docs for insurance, trade coordination</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">24/7 Emergency Dispatch</h3>
-                    <ul class="text-gray-500 text-sm space-y-1.5">
-                        <li>• Immediate local on-site assessment</li>
-                        <li>• Full photo documentation for insurance</li>
-                        <li>• Trusted local trade coordination</li>
-                    </ul>
+                    <div class="service-detail hidden mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">When something goes wrong, every minute counts. Our team is local and ready to respond immediately — day or night — to protect your property from further damage.</p>
+                        <ul class="text-gray-500 text-sm space-y-1.5">
+                            <li>✓ Immediate local on-site assessment</li>
+                            <li>✓ Full photo & video documentation for insurance claims</li>
+                            <li>✓ Emergency water shutoff & damage mitigation</li>
+                            <li>✓ Trusted local trade coordination for repairs</li>
+                            <li>✓ Direct communication with you & your insurance</li>
+                            <li>✓ Follow-up monitoring until issue is resolved</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bg-white border border-gray-100 rounded-2xl p-6 card-hover">
-                    <div class="w-10 h-10 bg-brand-50 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <div class="service-card border border-gray-200 rounded-xl p-5 cursor-pointer hover:border-brand-300 hover:shadow-sm transition" onclick="this.querySelector('.service-detail').classList.toggle('hidden')">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-9 h-9 bg-brand-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4.5 h-4.5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Specialized Resort Care</h3>
+                                <p class="text-sm text-gray-400">Ski/chalet monitoring, snow removal, seasonal opening/closing</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Specialized Resort Care</h3>
-                    <ul class="text-gray-500 text-sm space-y-1.5">
-                        <li>• Ski property & chalet monitoring</li>
-                        <li>• Snow removal coordination</li>
-                        <li>• Seasonal opening & closing setup</li>
-                    </ul>
+                    <div class="service-detail hidden mt-4 pt-4 border-t border-gray-100">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-3">Sun Peaks and area recreational properties need specialized care. We understand resort living — from heavy snow loads to extended vacancy between ski trips.</p>
+                        <ul class="text-gray-500 text-sm space-y-1.5">
+                            <li>✓ Ski property & chalet monitoring between visits</li>
+                            <li>✓ Snow removal & driveway clearing coordination</li>
+                            <li>✓ Seasonal opening setup — heat, water, supplies</li>
+                            <li>✓ End-of-season closing & winterization</li>
+                            <li>✓ Hot tub & outdoor equipment checks</li>
+                            <li>✓ Guest-ready preparation for rental properties</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
